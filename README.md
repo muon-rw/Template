@@ -31,11 +31,6 @@ ___
 - `Settings -> Build, Execution, and Deployment -> Build Tools -> Gradle -> Gradle JVM`
 - - (*Keep `Build and Run using` set to `Gradle`, not IDEA! This is required for property expansion.*)
 
-### 4. This template requires a local build of MixinMCP in your local maven (For now!)
-- See https://github.com/muon-rw/MixinMCP, clone and run `build` + `publishToMavenLocal` (Also recommended, `buildPlugin` then copy from `build/distributions`, Intellij -> Plugins -> Install Plugin from Disk)
-- You can simply remove the gradle plugin in the 4 `build.gradle` files where it is present if you do not plan to use this
-
-
 ## How to Use:
 - Run `Fabric Client`, `Fabric ClientExtra`, `Fabric Server`, `Neoforge Client`, `Neoforge ClientExtra`, or `Neoforge Server` from your run configurations
 - For servers, you will have to set `eula.txt` to true, then `online-mode=false` in `server.propeties` to connect (unless you set up authentication - not covered here)
