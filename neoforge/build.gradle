@@ -4,6 +4,15 @@ plugins {
     id 'dev.mixinmcp.decompile'
 }
 
+// Loom provides `localRuntime` out of the box; MDG does not, so wire it up here.
+// Deps in `localRuntime` are on the dev runtime classpath but aren't exposed in
+// `runtimeElements`, so they don't propagate transitively to maven consumers.
+configurations {
+    localRuntime
+    runtimeClasspath.extendsFrom(localRuntime)
+    testRuntimeClasspath.extendsFrom(localRuntime)
+}
+
 dependencies {
     implementation("me.fzzyhmstrs:fzzy_config:${fzzy_config}+neoforge")
 
