@@ -49,8 +49,8 @@ Publishing to CurseForge, Modrinth, GitHub, and a Maven repository is pre-wired 
 - `github_owner` + `github_repo`: Both must be set - *Constructed as `https://www.github.com/github_owner/github_repo`*
 
 2. Set these environment variables on your user/system before running `./gradlew publishMods`:
-- `CURSEFORGE_TOKEN` - Generate [Here](https://legacy.curseforge.com/account/api-tokens) - *Only required if `curseforge_id` is set*
-- `MODRINTH_TOKEM` - Generate [Here](https://modrinth.com/settings/pats) - *Only required if `modrinth_id` is set*
+- `CF_TOKEN` - Generate [Here](https://legacy.curseforge.com/account/api-tokens) - *Only required if `curseforge_id` is set*
+- `MODRINTH_TOKEN` - Generate [Here](https://modrinth.com/settings/pats) - *Only required if `modrinth_id` is set*
 - `GITHUB_TOKEN` - Generate [Here](https://github.com/settings/tokens) - *Only required if `github_owner` + `github_repo` is set*
 - - - **WARNING!**
 - - *These are sensitive info; anyone can upload files to your projects if they get exposed, which is a massive risk vector!*
